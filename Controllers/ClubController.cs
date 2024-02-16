@@ -9,6 +9,7 @@ using GroopWebApp.Models;
 using GroopWebApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 
 namespace GroopWebApp.Controllers
@@ -48,7 +49,13 @@ namespace GroopWebApp.Controllers
                {
                 Title=clubVM.Title,
                 Description = clubVM.Description,
-                Image=result.Url.ToString()
+                Image=result.Url.ToString(),
+                Address = new Address
+                {
+                    Street = clubVM.Address.Street,
+                    City = clubVM.Address.City,
+                    State = clubVM.Address.State
+                }
                };
             _clubRepository.Add(club);
             return RedirectToAction("Index");
@@ -59,6 +66,55 @@ namespace GroopWebApp.Controllers
             return View(clubVM);
             
         }
-
+        public async Task<IActionResult> Edit(int id){
+            var club = await _clubRepository.GetByIdAsync(id);
+            if(club==null) return View("Error");
+            var clubVM = new EditClubViewModel
+            {
+                Title = club.Title,
+                Description = club.Description,
+                AddressId = club.AddressId,
+                Address = club.Address,
+                Url = club.Image,
+                ClubCategory = club.ClubCategory
+            };
+            return View(clubVM);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, EditClubViewModel clubVM)
+        {
+            if(!ModelState.IsValid)
+            {
+                ModelState.AddModelError("","Failed to edit club");
+                return View("Edit", clubVM);
+            }
+            var userClub = await _clubRepository.GetByIdAsyncNoTracking(id);
+            if(userClub != null){
+            try{
+                await _photoService.DeletePhotoAsync(userClub.Image);
+            }
+            catch(Exception ex)
+            {
+                ModelState.AddModelError("","Could not delete the photo");
+                return View(clubVM);
+            }
+            var photoResult = await _photoService.AddPhotoAsync(clubVM.Image);
+            var club = new Club
+            {
+                Id = id,
+                Title = clubVM.Title,
+                Description = clubVM.Description,
+                Image = photoResult.Url.ToString(),
+                AddressId = clubVM.AddressId,
+                Address = clubVM.Address
+            };
+            _clubRepository.Update(club);
+            return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(clubVM);
+            }           
+        }
     }
 }

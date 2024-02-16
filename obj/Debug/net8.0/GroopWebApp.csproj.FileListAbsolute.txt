@@ -136,3 +136,10 @@ C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\obj\Debug\net8.0\GroopWebApp.c
 C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\obj\Debug\net8.0\GroopWebApp.csproj.CopyComplete
 C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\bin\Debug\net8.0\CloudinaryDotNet.dll
 C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\obj\Debug\net8.0\GroopWebApp.sourcelink.json
+C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
