@@ -20,3 +20,11 @@ html {
 body {
   margin-bottom: 60px;
 }
+.background-image-home
+{
+  background-image: url('/image/Home-image.jpg');
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}

@@ -44,7 +44,7 @@ namespace GroopWebApp.Controllers
                 var result = await _signInManager.PasswordSignInAsync(user, loginViewModel.Password, false, false);
                 if(result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Race");
+                    return RedirectToAction("Login", "Account");
                 }
             }
             //Password is incorrect
@@ -79,8 +79,10 @@ namespace GroopWebApp.Controllers
             };
             var newUserResponse = await _userManager.CreateAsync(newUser, registerViewModel.Password);
             if(newUserResponse.Succeeded)
+            {
                 await _userManager.AddToRoleAsync(newUser, UserRoles.User);
-
+                TempData["Success"]="Congratulations, now you can login";
+            }
             return RedirectToAction("Index","Race");
 
         }

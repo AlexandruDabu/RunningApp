@@ -4,8 +4,8 @@
 @{
     ViewData["Title"] = "Login";
 }
-<div class="row">
-    <div class="col-md-6 offset-3">
+<div class="text-dark row mt-5">
+    <div class="rounded bg-light col-md-6 offset-3">
         <p>
             <h4>Log in to your account</h4>
         </p>
@@ -13,6 +13,12 @@
         {
             <div class="col-md-12 alert alert-danger">
                 <span><b>Sorry!</b> - @TempData["Error"]</span>
+            </div>
+        }
+        @if(TempData["Success"] !=null)
+        {
+            <div class="col-md-12 alert alert-success">
+                <span><b>Nice!</b> - @TempData["Success"]</span>
             </div>
         }
         <div class="row">
@@ -29,9 +35,9 @@
                         <input asp-for="Password" class="form-control" />
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
-                        <input class="btn btn-outline-success float right" type="submit" value="Log in" />
-                        <a class="btn btn-outline-secondary" asp-controller="Club" asp-action="Index">Cancel</a>
+                    <div class="form-group mt-3 mb-3">
+                        <input style="margin-right:10px"class="btn btn-success float right" type="submit" value="Log in" />
+                        <a class="btn btn-secondary" asp-controller="Club" asp-action="Index">Cancel</a>
                     </div>
                 </form>
             </div>

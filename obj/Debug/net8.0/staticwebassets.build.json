@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VXRn2sFM4njtX5De1/T6OTmfrd5OnsagoOlB+E6CvmM=",
+  "Hash": "AMaM5kgdi9K4V3Za7zmwrVLqdi6AWKq7wFvfKI5sQ5c=",
   "Source": "GroopWebApp",
   "BasePath": "_content/GroopWebApp",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\image\\Home-image.jpg",
+      "SourceId": "GroopWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\",
+      "BasePath": "_content/GroopWebApp",
+      "RelativePath": "image/Home-image.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\Home-image.jpg"
     },
     {
       "Identity": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\js\\site.js",

@@ -19,6 +19,7 @@ builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 builder.Services.AddScoped<IPhotoService, PhotoService>();
 builder.Services.AddScoped<IUserRepsotiroy, UserRepository>();
+builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddDbContext<ApplicationDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
