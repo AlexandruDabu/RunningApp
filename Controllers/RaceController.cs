@@ -32,6 +32,21 @@ namespace GroopWebApp.Controllers
             Race race = await _raceRepository.GetByIdAsync(id);
             return View(race);
         }
+        public async Task<IActionResult> Delete(int id)
+        {
+            var raceDetails = await _raceRepository.GetByIdAsync(id);
+            if(raceDetails == null) return View("Error");
+            return View(raceDetails);
+        }
+        [HttpPost,ActionName("Delete")]
+        public async Task<IActionResult> DeleteRace(int id)
+        {
+            var raceDetails = await _raceRepository.GetByIdAsync(id);
+            if(raceDetails == null) return View("Error");
+            _raceRepository.Delete(raceDetails);
+            return RedirectToAction("Index");
+
+        }
         public IActionResult Create()
         {
             var curUserId = _httpContextAccessor.HttpContext?.User.GetUserId();
