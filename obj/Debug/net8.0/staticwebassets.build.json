@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AMaM5kgdi9K4V3Za7zmwrVLqdi6AWKq7wFvfKI5sQ5c=",
+  "Hash": "OPo3xmN4K87FpEnbx1jatGR7BD9Cebpv2PdZzvJaB4s=",
   "Source": "GroopWebApp",
   "BasePath": "_content/GroopWebApp",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GroopWebApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\css\\font.css",
+      "SourceId": "GroopWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\",
+      "BasePath": "_content/GroopWebApp",
+      "RelativePath": "css/font.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\font.css"
     },
     {
       "Identity": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\css\\site.css",

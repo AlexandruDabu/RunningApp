@@ -19,7 +19,18 @@ html {
 
 body {
   margin-bottom: 60px;
+  font-family: 'Roboto', sans-serif;
 }
+#message-success {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+#message-success.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .background-image-home
 {
   background-image: url('/image/Home-image.jpg');

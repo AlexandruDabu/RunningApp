@@ -15,12 +15,7 @@
                 <span><b>Sorry!</b> - @TempData["Error"]</span>
             </div>
         }
-        @if(TempData["Success"] !=null)
-        {
-            <div class="col-md-12 alert alert-success">
-                <span><b>Nice!</b> - @TempData["Success"]</span>
-            </div>
-        }
+        
         <div class="row">
             <div class="col-md-8 offset-2">
                 <form asp-action="Login">
@@ -35,7 +30,7 @@
                         <input asp-for="Password" class="form-control" />
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
-                    <div class="form-group mt-3 mb-3">
+                    <div class="form-group my-3 ">
                         <input style="margin-right:10px"class="btn btn-success float right" type="submit" value="Log in" />
                         <a class="btn btn-secondary" asp-controller="Club" asp-action="Index">Cancel</a>
                     </div>

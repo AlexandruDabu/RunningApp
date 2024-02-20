@@ -3,7 +3,25 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
+@* Logged In Message *@
+@if (TempData["SuccessLogin"] != null)
+{
+  <div id="message-success" class="alert alert-success position-fixed top-0 start-50 translate-middle-x">
+    <span><b>Congratulations! </b>@TempData["SuccessLogin"] </span>
+  </div>
+}
+@if(TempData["SuccessRegister"] !=null)
+{
+  <div id="message-success" class="alert alert-success position-fixed top-0 start-50 translate-middle-x">
+    <span><b>Congratulations!</b> - @TempData["SuccessRegister"]</span>
+  </div>
+}
+@if(TempData["SuccessLogOut"] !=null)
+{
+  <div id="message-success" class="alert alert-danger position-fixed top-0 start-50 translate-middle-x d-flex justify-content-center align-items-center" style="width: 17%; height: 50px;">
+    <span>@TempData["SuccessLogOut"]</span>
+  </div>
+}
 @if(User.Identity.IsAuthenticated)
 {
   if(Model.Clubs!=null)
@@ -110,7 +128,7 @@ else{
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" value="agree" name="agree-terms" id="check-agree">
                                     <label class="custom-control-label text-small" for="check-agree">
-                                        I agree to the <a href="#">Terms &amp; Conditions</a>
+                                        I agree to the <a  asp-area="" asp-controller="Home" asp-action="Privacy" style="text-decoration:none">Terms &amp; Conditions</a>
                                     </label>
                                 </div>
                             </div>

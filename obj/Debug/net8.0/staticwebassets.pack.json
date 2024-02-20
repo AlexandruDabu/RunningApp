@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\GroopWebApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\css\\font.css",
+      "PackagePath": "staticwebassets\\css\\font.css"
+    },
+    {
       "Id": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

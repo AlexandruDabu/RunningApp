@@ -6,7 +6,12 @@
     <title>@ViewData["Title"] - GroopWebApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/font.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/GroopWebApp.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body class="bg-dark">
     <header>
@@ -38,27 +43,20 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-white" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
                                 </li>
-                                <li class="nav-item">
-                                    <form asp-area="" asp-controller="Account" asp-action="Logout">
-                                        <button class="btn btn-outline-danger">Logout</button>
-                                    </form>
-                                </li>
-
-                                }
-                                else
-                                {
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
-                                </li>
                                 }
                             </ul>
+        @if(!User.Identity.IsAuthenticated)
+            {
             <form class="d-flex">
-                <input class="form-control me-sm-2" type="search" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                <a class="btn btn-success form-control me-sm-2 text-white" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                <a class="btn btn-secondary my-2-my-sm-0" asp-area="" asp-controller="Account" asp-action="Register">Register</a>                
             </form>
+            }
+        else{
+            <form asp-area="" asp-controller="Account" asp-action="Logout" class="d-flex">
+                <button class="btn btn-danger">Logout</button>                     
+            </form>
+        }
             </div>
         </div>
         </nav>
