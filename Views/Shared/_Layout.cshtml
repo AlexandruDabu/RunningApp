@@ -24,36 +24,37 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav flex-grow-1 me-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
                                 @if(User.Identity.IsAuthenticated)
                                 {
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="User" asp-action="Index">Runners</a>
+                                    <a class="nav-link" asp-area="" asp-controller="User" asp-action="Index">Runners</a>
                                 </li>
                                 }
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Club" asp-action="Index">Club</a>
+                                    <a class="nav-link" asp-area="" asp-controller="Club" asp-action="Index">Club</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Race" asp-action="Index">Races</a>
+                                    <a class="nav-link" asp-area="" asp-controller="Race" asp-action="Index">Races</a>
                                 </li>
                                 @if(User.Identity.IsAuthenticated)
                                 {
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                                    <a class="nav-link" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
                                 </li>
                                 }
                             </ul>
         @if(!User.Identity.IsAuthenticated)
             {
             <form class="d-flex">
-                <a class="btn btn-success form-control me-sm-2 text-white" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                <a class="btn btn-success form-control me-sm-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                 <a class="btn btn-secondary my-2-my-sm-0" asp-area="" asp-controller="Account" asp-action="Register">Register</a>                
             </form>
             }
         else{
             <form asp-area="" asp-controller="Account" asp-action="Logout" class="d-flex">
+                <a asp-area="" asp-controller="Dashboard" id="user-link" class="mx-3 mt-1" style="font-size:24px; text-decoration:none">@User.Identity.Name</a>
                 <button class="btn btn-danger">Logout</button>                     
             </form>
         }

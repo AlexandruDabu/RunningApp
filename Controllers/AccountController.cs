@@ -73,16 +73,26 @@ namespace GroopWebApp.Controllers
                 TempData["Error"] = "This email address is already in use";
                 return View(registerViewModel);
             }
+            var username = await _userManager.FindByNameAsync(registerViewModel.Username);
+            if(username!=null)
+            {
+                TempData["Error"] = "This username is taken";
+                return View(registerViewModel);
+            }
             var newUser = new AppUser()
             {
                 Email = registerViewModel.EmailAddress,
-                UserName = registerViewModel.EmailAddress
+                UserName = registerViewModel.Username
             };
             var newUserResponse = await _userManager.CreateAsync(newUser, registerViewModel.Password);
             if(newUserResponse.Succeeded)
             {
                 await _userManager.AddToRoleAsync(newUser, UserRoles.User);
                 TempData["SuccessRegister"] = "You registered with success";
+            }
+            else
+            {
+                TempData["FailRegister"] = "Something went wrong, try again";
             }
             return RedirectToAction("Index","Home");
 

@@ -22,6 +22,12 @@
     <span>@TempData["SuccessLogOut"]</span>
   </div>
 }
+@if(TempData["FailRegister"] != null)
+{
+  <div id="message-success" class="alert alert-danger position-fixed top-0 start-50 translate-middle-x">
+    <span><b>Sorry!</b> - @TempData["FailRegister"]</span>
+  </div>
+}
 @if(User.Identity.IsAuthenticated)
 {
   if(Model.Clubs!=null)
