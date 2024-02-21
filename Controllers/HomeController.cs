@@ -10,6 +10,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Identity;
 using GroopWebApp.Data;
 using GroopWebApp.Interfaces;
+using GroopWebApp.Services;
 namespace GroopWebApp.Controllers;
 
 public class HomeController : Controller
@@ -21,14 +22,18 @@ public class HomeController : Controller
         
         private readonly ILocationService _locationService;
         private readonly SignInManager<AppUser> _signInManager;
-    public HomeController(ILogger<HomeController> logger, IClubRepository clubRepository, UserManager<AppUser> userManager, ILocationService locationService, SignInManager<AppUser> signInManager)
+        private readonly IGeoLocation _geoLocation;
+
+    public HomeController(ILogger<HomeController> logger, IGeoLocation geoLocation, IClubRepository clubRepository, UserManager<AppUser> userManager, ILocationService locationService, SignInManager<AppUser> signInManager)
     {
+        _geoLocation = geoLocation;
         _signInManager = signInManager;
         _locationService = locationService;
         _clubRepository = clubRepository;
         _logger = logger;
         _userManager = userManager;
     }
+    
     
         public IActionResult Register() 
         {
@@ -81,23 +86,18 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Index()
     {
-        var ipInfo = new IPInfo();
         var homeViewModel = new HomeViewModel();
         try
         {
-            string url = "https://ipinfo.io?token=2d394a16ceb5d1";
-            var info = new WebClient().DownloadString(url);
-            ipInfo = JsonConvert.DeserializeObject<IPInfo>(info);
-            RegionInfo myRI1 = new RegionInfo(ipInfo.Country);
-            ipInfo.Country = myRI1.EnglishName;
-            homeViewModel.City = ipInfo.City;
-            homeViewModel.State = ipInfo.Region;
+            
+            var result = await _geoLocation.GetGeoInfo();
+            GeoLocationViewModel geoLoc = new GeoLocationViewModel();
+            geoLoc = JsonConvert.DeserializeObject<GeoLocationViewModel>(result);
+            homeViewModel.City = geoLoc.City;
+            homeViewModel.State = geoLoc.RegionName;
             if(homeViewModel.City!=null)
             {
                 homeViewModel.Clubs = await _clubRepository.GetClubByCity(homeViewModel.City);
-            }
-            {
-                homeViewModel.Clubs=null;
             }
             return View(homeViewModel);
         }
@@ -107,7 +107,6 @@ public class HomeController : Controller
         }
         return View(homeViewModel);
     }
-
     public IActionResult Privacy()
     {
         return View();
@@ -118,4 +117,6 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GroopWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ef451e1b7940eaa809b43150b2061ce137aca1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2249d2b265f1c11388cdc557b2fac60c08098bbf")]
 [assembly: System.Reflection.AssemblyProductAttribute("GroopWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GroopWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
