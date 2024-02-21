@@ -44,6 +44,7 @@ namespace GroopWebApp.Controllers
             var raceDetails = await _raceRepository.GetByIdAsync(id);
             if(raceDetails == null) return View("Error");
             _raceRepository.Delete(raceDetails);
+            TempData["DeleteRace"] = "Race deleted successfully";
             return RedirectToAction("Index");
 
         }
@@ -77,6 +78,7 @@ namespace GroopWebApp.Controllers
                     }
                 };
             _raceRepository.Add(race);
+            TempData["SuccessRace"] = "You create a Race!";
             return RedirectToAction("Index");
             }
             else{
@@ -128,6 +130,7 @@ namespace GroopWebApp.Controllers
                     Address = raceVM.Address
                 };
                 _raceRepository.Update(race);
+                TempData["EditRace"] = "You edited the race succesfully";
                 return RedirectToAction("Index");
             }
             else{

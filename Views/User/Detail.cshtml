@@ -5,14 +5,14 @@
 <div class="main-container">
     <nav aria-label="breadcrumb" role="navigation" class="bg-primary text-white">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row bg-light justify-content-center">
                 <div class="col">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="#">Home</a>
+                            <a asp-area="" asp-action="Index" asp-controller="Home">Home</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#">Runners</a>
+                            <a asp-area="" asp-action="Index" asp-asp-controller="User">Runners</a>
                         </li>
 
                         <li class="breadcrumb-item active" aria-current="page">Profile</li>
@@ -24,7 +24,7 @@
         </div>
         <!--end of container-->
     </nav>
-    <section class="bg-white">
+    <section class="bg-light text-secondary">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
@@ -35,29 +35,8 @@
                                 <h1 class="h2 mb-2">@Model.UserName</h1>
                                 @* <span class="text-muted"><i class="icon-location"></i>@Model.Location</span> *@
                             </div>
-                            <p class="text-muted">Pace: @Model.Pace</p>
-                            <p class="text-muted">Mileage: @Model.Mileage</p>
-                            <p>
-                                Bit of a go-getter me, creating lovely things that help others. You'll most often find me out back in the hammock, listening to tunes and bending pixels to my will.
-                            </p>
-                            <div>
-                                <button class="btn btn-outline-primary" data-toggle="button"><i class="icon-add-user"></i> Follow</button>
-                                <button class="btn btn-outline-primary">
-                                    <i class="icon-mail"></i>
-                                </button>
-                                <div class="dropdown d-inline-block">
-                                    <button class="btn btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="icon-dots-three-horizontal"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 36px, 0px);">
-                                        <a class="dropdown-item" href="#">Add to group</a>
-                                        <a class="dropdown-item" href="#">Share Profile</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Block</a>
-                                        <a class="dropdown-item" href="#">Report</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <p>Pace: @Model.Pace</p>
+                            <p>Mileage: @Model.Mileage</p>
                         </div>
                     </div>
                 </div>

@@ -66,6 +66,7 @@ namespace GroopWebApp.Controllers
                 }
                };
             _clubRepository.Add(club);
+            TempData["SuccessClub"] = "You created the club!";
             return RedirectToAction("Index");
             }
             else{
@@ -87,6 +88,7 @@ namespace GroopWebApp.Controllers
             var clubDetails = await _clubRepository.GetByIdAsync(id);
             if (clubDetails == null) return View("Error");
             _clubRepository.Delete(clubDetails);
+            TempData["DeleteClub"] = "Club deleted successfully";
             return RedirectToAction("Index");
         }
 
@@ -133,6 +135,7 @@ namespace GroopWebApp.Controllers
                 Address = clubVM.Address
             };
             _clubRepository.Update(club);
+            TempData["EditClub"] = "You edited the club succesfully";
             return RedirectToAction("Index");
             }
             else
