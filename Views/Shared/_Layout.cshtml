@@ -48,13 +48,14 @@
         @if(!User.Identity.IsAuthenticated)
             {
             <form class="d-flex">
+                <a class="text-white btn btn-info form-control me-sm-2">AdminDemo</a>
                 <a class="btn btn-success form-control me-sm-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                 <a class="btn btn-secondary my-2-my-sm-0" asp-area="" asp-controller="Account" asp-action="Register">Register</a>                
             </form>
             }
         else{
             <form asp-area="" asp-controller="Account" asp-action="Logout" class="d-flex">
-                <a asp-area="" asp-controller="Dashboard" id="user-link" class="mx-3 mt-1" style="font-size:24px; text-decoration:none">@User.Identity.Name</a>
+                <a asp-area="" asp-controller="Dashboard" asp-action="Index" id="user-link" class="mx-3 mt-1" style="font-size:24px; text-decoration:none">@User.Identity.Name</a>
                 <button class="btn btn-danger">Logout</button>                     
             </form>
         }

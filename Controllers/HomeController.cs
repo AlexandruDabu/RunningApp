@@ -49,9 +49,16 @@ public class HomeController : Controller
             if (!ModelState.IsValid) return View(homeVM);
 
             var user = await _userManager.FindByEmailAsync(createVM.Email);
+
             if (user != null)
             {
                 ModelState.AddModelError("Register.Email", "This email address is already in use");
+                return View(homeVM);
+            }
+            var username = await _userManager.FindByNameAsync(createVM.UserName);
+            if(username!=null)
+            {
+                ModelState.AddModelError("Register.Username", "This username is already taken");
                 return View(homeVM);
             }
             var userCity = createVM.City;
@@ -80,8 +87,9 @@ public class HomeController : Controller
             {
                 await _signInManager.SignInAsync(newUser, isPersistent: false);
                 await _userManager.AddToRoleAsync(newUser, UserRoles.User);
+                TempData["SuccessRegister"] = "You registered with success";
             }
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("Index", "Home");
         }
 
     public async Task<IActionResult> Index()
@@ -95,6 +103,7 @@ public class HomeController : Controller
             geoLoc = JsonConvert.DeserializeObject<GeoLocationViewModel>(result);
             homeViewModel.City = geoLoc.City;
             homeViewModel.State = geoLoc.RegionName;
+            homeViewModel.Country = geoLoc.CountryName;
             if(homeViewModel.City!=null)
             {
                 homeViewModel.Clubs = await _clubRepository.GetClubByCity(homeViewModel.City);

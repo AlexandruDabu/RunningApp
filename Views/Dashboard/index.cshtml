@@ -10,7 +10,7 @@
 <div class="album py-5 bg-light">
     <div class="container">
         @if(Model.Races.Count()!=0){
-        <h2 class="display-4 fw-normal">Your races</h2>
+        <h4 style ="font-family:'roboto',sans-serif" class="text-secondary fw-normal">Your Races</h4>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
             @foreach (var item in Model.Races)
@@ -41,7 +41,7 @@
         }
         @if(Model.Clubs.Count()!=0)
         {
-        <h2 class="display-4 fw-normal">Your Clubs</h2>
+        <h4 style ="font-family:'roboto',sans-serif" class="text-secondary fw-normal">Your Clubs</h4>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             @foreach (var item in Model.Clubs)
             {

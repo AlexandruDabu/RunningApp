@@ -22,11 +22,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="media flex-wrap mb-0 align-items-center">
+                                @* 
                                 @{
                                     var imageUrl = string.IsNullOrEmpty(Model.ProfileImageUrl)
                                     ? "/img/avatar-male-3.jpg"
                                     : Model.ProfileImageUrl;
                                 }
+                                
                                 <img alt="Image" src="@imageUrl" class="avatar avatar-lg mb-3 mb-md-0" />
                                 <div class="media-body">
                                     <form asp-action="EditUserProfile" enctype="multipart/form-data">
@@ -39,7 +41,7 @@
                                         </label>
                                         <div>
                                             <small>For best results, use an image at least 256px by 256px in either .jpg or .png format</small>
-                                        </div>
+                                        </div> 
 
                                         <input asp-for="City" hidden />
                                         <input asp-for="State" hidden />
@@ -51,6 +53,7 @@
                                         <input asp-for="EmailAddress" hidden />
 
                                     </form>
+                                    *@
                                 </div>
                             </div>
                         </div>
@@ -99,7 +102,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-group">
+                                    <div class="form-group mt-2">
                                         <label for="about-me">About me:</label>
                                         <textarea class="form-control form-control-lg"
                                                   name="profileBio"
@@ -109,7 +112,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <button class="btn btn-primary" type="submit">Save changes</button>
+                                        <button class="btn btn-primary mt-3" type="submit">Save changes</button>
                                     </div>
                                 </div>
                             </form>
