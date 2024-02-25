@@ -13,12 +13,12 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
       "Id": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\image\\Home-image.jpg",
       "PackagePath": "staticwebassets\\image\\Home-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\image\\favicon.ico",
+      "PackagePath": "staticwebassets\\image\\favicon.ico"
     },
     {
       "Id": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\js\\site.js",

@@ -9,7 +9,7 @@
 <a type="button" class="btn btn-primary" asp-area="" asp-controller="Dashboard" asp-action="EditUserProfile">Edit User Profile</a>
 <div class="album py-5 bg-light">
     <div class="container">
-        @if(Model.Races.Count()!=0){
+        @if(Model.Clubs != null && Model.Clubs.Any()){
         <h4 style ="font-family:'roboto',sans-serif" class="text-secondary fw-normal">Your Races</h4>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
@@ -39,7 +39,7 @@
             }
         </div>
         }
-        @if(Model.Clubs.Count()!=0)
+        @if(Model.Clubs != null && Model.Clubs.Any())
         {
         <h4 style ="font-family:'roboto',sans-serif" class="text-secondary fw-normal">Your Clubs</h4>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -69,7 +69,7 @@
             }
         </div>
         }
-        @if(Model.Clubs.Count()==0 && Model.Races.Count==0)
+        @if(Model.Clubs.Count()==0 && Model.Races.Count()==0 || Model.Clubs==null && Model.Races==null)
         {
             <h4 class="text-dark text-center" style="font-family:'roboto',sans-serif">We are sorry, you don't own any Club/Race, please create <a class="text-decoration-none" asp-area="" asp-action="Create" asp-controller="Club">Club</a> or 
             <a class="text-decoration-none" asp-area="" asp-action="Create" asp-controller="Race">Race</a>, Thank you! </h4>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OPo3xmN4K87FpEnbx1jatGR7BD9Cebpv2PdZzvJaB4s=",
+  "Hash": "2n6Rf4xTyPYu/vORm74sGEbC3GNZYoOQR0bDbSda/8I=",
   "Source": "GroopWebApp",
   "BasePath": "_content/GroopWebApp",
   "Mode": "Default",
@@ -93,12 +93,12 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\image\\favicon.ico",
       "SourceId": "GroopWebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\",
       "BasePath": "_content/GroopWebApp",
-      "RelativePath": "favicon.ico",
+      "RelativePath": "image/favicon.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +109,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\image\\favicon.ico"
     },
     {
       "Identity": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\wwwroot\\image\\Home-image.jpg",

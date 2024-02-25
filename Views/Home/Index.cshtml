@@ -30,7 +30,7 @@
 }
 @if(User.Identity.IsAuthenticated)
 {
-  if(Model.Clubs.Count()!=0)
+  if(Model.Clubs != null && Model.Clubs.Any())
   {
   <div class="row justify-content-center my-4">
                 <div class="col">
@@ -143,15 +143,7 @@ else{
 <!--end of section-->
 <section>
     <div class="container">
-        @if (Model.Clubs.Count() == 0)
-        {
-            <h1 class="fw-light mt-4">
-                There are no running clubs in your area! <a asp-area="" asp-controller="Account"
-                                                        asp-action="Login" style="text-decoration: none;">Login</a> and create one!
-            </h1>
-            
-        }
-        else
+        @if(Model.Clubs!=null && Model.Clubs.Any())
         {
             <div class="row justify-content-center my-4">
                 <div class="col">
@@ -188,6 +180,14 @@ else{
                 </li>
                 }
             </ul>
+        }
+        else
+        {
+            <h1 class="fw-light mt-4">
+                There are no running clubs in your area! <a asp-area="" asp-controller="Account"
+                                                        asp-action="Login" style="text-decoration: none;">Login</a> and create one!
+            </h1>
+            
         }
         <!--end of row-->
     </div>
