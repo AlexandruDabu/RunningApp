@@ -9,107 +9,107 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GroopWebApp
 build_property.RootNamespace = GroopWebApp
-build_property.ProjectDir = C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp\
+build_property.ProjectDir = C:\Users\alexa\OneDrive\Desktop\Repos\groopwebapp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\alexa\OneDrive\Desktop\Repos\GroopWebApp
+build_property.MSBuildProjectDirectory = C:\Users\alexa\OneDrive\Desktop\Repos\groopwebapp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Account/Login.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Account/Register.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Club/Create.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Club/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YlxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Club/Delete.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Club/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YlxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Club/Detail.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Club/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YlxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Club/Edit.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Club/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YlxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Club/Index.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Club/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2x1YlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Dashboard/EditUserProfile.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Dashboard/EditUserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRVc2VyUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Dashboard/index.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Dashboard/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Home/Index.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Home/Privacy.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Home/Register.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Race/Create.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Race/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Race/Delete.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Race/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Race/Detail.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Race/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Race/Edit.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Race/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Race/index.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Race/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFjZVxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Shared/Error.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/User/Detail.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/User/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/User/Index.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/_ViewImports.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/_ViewStart.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alexa/OneDrive/Desktop/Repos/GroopWebApp/Views/Shared/_Layout.cshtml]
+[C:/Users/alexa/OneDrive/Desktop/Repos/groopwebapp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mv4s3ynm0g

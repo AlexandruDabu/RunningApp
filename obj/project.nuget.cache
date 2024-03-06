@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rZgnjZLxjocSLOc8p11Mf6CBmkBL5HYpcnsxnsccJQZBo7Xn518HAamRt1D0KmXF0qtwO2xopdQFKhUAJPu6tg==",
+  "dgSpecHash": "UoFhoE4y5tGZeBl5+dmrxpZPG3fCA4nx911TJ4jFXafK9Iv82TmiZICKYc//gCGcAd3udTdPOiFQe4vQG4fzqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\GroopWebApp\\GroopWebApp.csproj",
+  "projectFilePath": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\groopwebapp\\GroopWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
