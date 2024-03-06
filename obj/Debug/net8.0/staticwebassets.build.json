@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R/ioISttRFesty/SmediE3Zy2H4JdnAdx8HMsZxT8Ls=",
+  "Hash": "SW/M4YX3UkxlWCYqARZ/WSI6F4NsvOtrTTyd44TfbQ8=",
   "Source": "GroopWebApp",
   "BasePath": "_content/GroopWebApp",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\Home-image.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\groopwebapp\\wwwroot\\image\\user.jpg",
+      "SourceId": "GroopWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\groopwebapp\\wwwroot\\",
+      "BasePath": "_content/GroopWebApp",
+      "RelativePath": "image/user.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\user.jpg"
     },
     {
       "Identity": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\groopwebapp\\wwwroot\\js\\site.js",

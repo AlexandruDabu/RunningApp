@@ -10,6 +10,12 @@
     <span><b>Congratulations! </b>@TempData["SuccessLogin"] </span>
   </div>
 }
+@if (TempData["AdminSucceed"] != null)
+{
+  <div id="message-success" class="alert alert-success position-fixed top-0 start-50 translate-middle-x">
+    <span>@TempData["AdminSucceed"] </span>
+  </div>
+}
 @if(TempData["SuccessRegister"] !=null)
 {
   <div id="message-success" class="alert alert-success position-fixed top-0 start-50 translate-middle-x">

@@ -18,9 +18,12 @@
     <span>@TempData["EditClub"] </span>
   </div>
 }
-     <div class="album py-5 bg-light">
+     <div class="album py-5 bg-light rounded mt-3">
         <div class="container">
           <div class="row">
+            
+        @if(Model.Any())
+        {
             @foreach(var item in Model)
             {
             <div class="col-md-4">
@@ -44,6 +47,13 @@
               </div>
             </div>
             }
+          }
+          else {
+              <h1 class="fw-light">
+                There are no running clubs in your area! You can <a asp-area="" asp-controller="Club"
+                                                          asp-action="Create" style="text-decoration: none;">create</a> your own right now!
+              </h1>
+          }
             </div>
         </div>
     </div>

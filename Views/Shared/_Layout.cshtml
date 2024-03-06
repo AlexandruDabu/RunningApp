@@ -48,8 +48,13 @@
                             </ul>
         @if(!User.Identity.IsAuthenticated)
             {
+            <form method="post" asp-area="" asp-controller="Account" asp-action="LoginAsAdmin">
+              <button type="submit" class="text-white btn btn-info form-control me-sm-2">AdminDemo</button>
+            </form>
+            <form method="post" asp-area="" asp-controller="Account" asp-action="LoginAsUser" class="mx-2">
+              <button type="submit" class="text-white btn btn-info form-control me-sm-2">UserDemo</button>
+            </form>
             <form class="d-flex">
-                <a class="text-white btn btn-info form-control me-sm-2">AdminDemo</a>
                 <a class="btn btn-success form-control me-sm-2" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                 <a class="btn btn-secondary my-2-my-sm-0" asp-area="" asp-controller="Account" asp-action="Register">Register</a>                
             </form>

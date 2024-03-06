@@ -56,12 +56,39 @@ namespace GroopWebApp.Controllers
         TempData["Error"] ="Wrong credentials. Please, try again";
         return View(loginViewModel);
         }
-
+        
+        
+        [HttpPost]
+        public async Task<IActionResult> LoginAsUser()
+        {
+            var result = await _signInManager.PasswordSignInAsync("app-user", "Coding@1234?", false, lockoutOnFailure: false);
+            
+            if(result.Succeeded)
+            {
+                TempData["SuccessLogin"] = "You logged in as User!";
+                return RedirectToAction("Index","Home");
+            }
+            return View();
+        }
+        
+        [HttpPost]
+        public async Task<IActionResult> LoginAsAdmin()
+        {
+            var result = await _signInManager.PasswordSignInAsync("AlexDab", "Coding@1234?", false, lockoutOnFailure: false);
+            
+            if(result.Succeeded)
+            {
+                TempData["AdminSucceed"] = "Logged in as Admin";
+                return RedirectToAction("Index","Home");
+            }
+            return View();
+        }
         public IActionResult Register()
         {
             var response = new RegisterViewModel();
             return View(response);
         }
+
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
         {

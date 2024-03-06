@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\image\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\groopwebapp\\wwwroot\\image\\user.jpg",
+      "PackagePath": "staticwebassets\\image\\user.jpg"
+    },
+    {
       "Id": "C:\\Users\\alexa\\OneDrive\\Desktop\\Repos\\groopwebapp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
