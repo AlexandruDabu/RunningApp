@@ -20,5 +20,6 @@ namespace GroopWebApp.Models
         public int? AddressId { get; set; }
         public ICollection<Club>? Clubs { get; set; }
         public ICollection<Race>? Races { get; set; }
+        public string Bio { get; set; }
     }
 }

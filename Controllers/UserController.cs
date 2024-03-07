@@ -31,7 +31,10 @@ namespace GroopWebApp.Controllers
                     UserName = user.UserName,
                     Pace = user.Pace,
                     Mileage = user.Mileage,
-                    ProfileImageUrl = user.ProfileImageUrl
+                    ProfileImageUrl = user.ProfileImageUrl,
+                    City = user.City,
+                    State = user.State,
+                    Bio = user.Bio
                 };
                 result.Add(userViewModel);
             }
@@ -45,7 +48,10 @@ namespace GroopWebApp.Controllers
                 Id = user.Id,
                 UserName = user.UserName,
                 Pace = user.Pace,
-                Mileage = user.Mileage
+                Mileage = user.Mileage,
+                City = user.City,
+                State = user.State,
+                Bio = user.Bio
             };
             return View(userDetailViewModel);
         }

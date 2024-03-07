@@ -103,11 +103,12 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group mt-2">
-                                        <label for="about-me">About me:</label>
-                                        <textarea class="form-control form-control-lg"
-                                                  name="profileBio"
+                                        <label asp-for="Bio">About me:</label>
+                                        <textarea asp-for="Bio" class="form-control form-control-lg"
+                                                  name="Bio"
                                                   rows="4"
-                                                  id="about-me"></textarea>
+                                                  ></textarea>
+                                        <span asp-validation-for="Mileage" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-12">

@@ -49,7 +49,8 @@ namespace GroopWebApp.Controllers
                 Mileage = user.Mileage,
                 ProfileImageUrl = user.ProfileImageUrl,
                 City = user.City,
-                State = user.State
+                State = user.State,
+                Bio = user.Bio
             };
             return View(editUserProfile);
 
@@ -61,6 +62,7 @@ namespace GroopWebApp.Controllers
             user.Mileage = editVM.Mileage;
             user.City = editVM.City;
             user.State = editVM.State;
+            user.Bio = editVM.Bio;
         }
         [HttpPost]
         public async Task<IActionResult> EditUserProfile(EditUserProfileViewModel editVM)
