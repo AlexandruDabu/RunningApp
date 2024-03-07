@@ -25,7 +25,7 @@ namespace GroopWebApp.Services
         public async Task<ImageUploadResult> AddPhotoAsync(IFormFile file)
         {
             var uploadResult = new ImageUploadResult();
-            if(file.Length>0){
+            if(file!=null && file.Length>0){
                 using var stream = file.OpenReadStream();
                 var uploadParams = new ImageUploadParams
                 {
@@ -34,6 +34,11 @@ namespace GroopWebApp.Services
 
                 };
                 uploadResult = await _cloudinary.UploadAsync(uploadParams);
+            }
+            else{
+                uploadResult.Url = new Uri("/image/user.jpg", UriKind.Relative);
+                uploadResult.PublicId = "user";
+                uploadResult.Format = "jpg";
             }
             return uploadResult;
         }

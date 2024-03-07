@@ -111,23 +111,24 @@ namespace GroopWebApp.Controllers
             }
             var userRace = await _raceRepository.GetByIdAsyncNoTracking(id);
             if(userRace!=null){
-                try{
-                    await _photoService.DeletePhotoAsync(userRace.Image);
-                }
-                catch(Exception ex)
-                {
-                    ModelState.AddModelError("","Could not delete the photo");
-                    return View(raceVM);
-                }
+                // try{
+                //     await _photoService.DeletePhotoAsync(userRace.Image);
+                // }
+                // catch(Exception ex)
+                // {
+                //     ModelState.AddModelError("","Could not delete the photo");
+                //     return View(raceVM);
+                // }
                 var photoResult = await _photoService.AddPhotoAsync(raceVM.Image);
                 var race = new Race
                 {
                     Id = id,
                     Title = raceVM.Title,
                     Description = raceVM.Description,
-                    Image = photoResult.Url.ToString(),
+                    Image = photoResult.Url.ToString() == "/image/user.jpg" ? userRace.Image : photoResult.Url.ToString(),
                     AddressId = raceVM.AddressId,
-                    Address = raceVM.Address
+                    Address = raceVM.Address,
+                    AppUserId = userRace.AppUserId
                 };
                 _raceRepository.Update(race);
                 TempData["EditRace"] = "You edited the race succesfully";

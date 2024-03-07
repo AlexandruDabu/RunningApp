@@ -42,6 +42,7 @@ namespace GroopWebApp.Controllers
             var createClubViewModel = new CreateClubViewModel
             {
                 AppUserId = curUserId
+                
             };
             return View(createClubViewModel);
         }
@@ -51,7 +52,6 @@ namespace GroopWebApp.Controllers
         {
             if(ModelState.IsValid){
                var result = await _photoService.AddPhotoAsync(clubVM.Image);
-               
                var club = new Club
                {
                 Title=clubVM.Title,
@@ -130,9 +130,10 @@ namespace GroopWebApp.Controllers
                 Id = id,
                 Title = clubVM.Title,
                 Description = clubVM.Description,
-                Image = photoResult.Url.ToString(),
+                Image = photoResult.Url.ToString() == "/image/user.jpg" ? userClub.Image : photoResult.Url.ToString(),
                 AddressId = clubVM.AddressId,
-                Address = clubVM.Address
+                Address = clubVM.Address,
+                AppUserId = userClub.AppUserId
             };
             _clubRepository.Update(club);
             TempData["EditClub"] = "You edited the club succesfully";
